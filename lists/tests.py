@@ -13,6 +13,7 @@ class HomePageTest(TestCase):
         self.assertIn('A new list item', response.content.decode())
         self.assertTemplateUsed(response, 'home.html')
 
+
 class ItemModelTest(TestCase):
 
     def test_saving_and_retrieving_items(self):
@@ -31,4 +32,4 @@ class ItemModelTest(TestCase):
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text, 'The first (ever) list item')
         self.assertEqual(second_saved_item.text, 'Item the second')
-# Create your tests here test.
+# Create your tests here testds.
