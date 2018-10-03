@@ -24,7 +24,7 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000')
 		
         # She notices the page title and header mention to-do lists
-        self.assertIn('1: Buy peacock feathers', [row.text for row in rows])
+        self.assertIn('To-Do', self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('To-Do', header_text)
 
