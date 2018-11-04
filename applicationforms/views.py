@@ -10,11 +10,11 @@ def view_applicationform(request, applicationform_id):
 
 def new_applicationform(request):
     applicationform_ = ApplicationForm.objects.create()
-    ApplicationFormItem.objects.create(text=request.POST['item_text'], applicationform=applicationform_)
+    ApplicationFormItem.objects.create(text=request.POST['applicationformitem_text'], applicationform=applicationform_)
     return redirect(f'/applicationforms/{applicationform_.id}/')
 
 def add_item(request, applicationform_id):
     applicationform_ = ApplicationForm.objects.get(id=applicationform_id)
-    ApplicationFormItem.objects.create(text=request.POST['item_text'], applicationform=applicationform_)
+    ApplicationFormItem.objects.create(text=request.POST['applicationformitem_text'], applicationform=applicationform_)
     return redirect(f'/applicationforms/{applicationform_.id}/')
 # Create your models here testd.

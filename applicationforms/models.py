@@ -6,5 +6,6 @@ class ApplicationForm(models.Model):
 
 class ApplicationFormItem(models.Model):
     text = models.TextField(default='')
-    applicationform = models.ForeignKey(ApplicationForm, default=None)
+    applicationform = models.TextField(default='')
+    #applicationform = models.ForeignKey(ApplicationForm, default=None)
 # Create your models here test- resume at "A New Field Means a New Migration".
