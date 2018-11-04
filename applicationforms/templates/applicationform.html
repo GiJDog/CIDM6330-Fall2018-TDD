@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Application Form</title>
+    </head>
+    <body>
+        <h1>ABET Accreditaion Application</h1>
+        <form method="POST" action="/applicationforms/{{ list.id }}/add_applicationformitem"> 
+            <input name="applicationformitem_text" id="id_new_applicationformitem" placeholder="Enter a Program Name" />
+            {% csrf_token %}
+        </form>
+    
+        <table id="id_applicationformitem_table">
+            {% for applicationformitem in applicationform.applicationformitem_set.all %}  
+                <tr><td>{{ forloop.counter }}: {{ applicationformitem.text }}</td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

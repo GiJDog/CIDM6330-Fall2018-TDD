@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>ABET Accreditation Application</title>
+    </head>
+    <body>
+        <h1>Start a new To-Do list</h1>
+        <form method="POST" action="/applicationforms/">
+          <input name="applicationformitem_text" id="id_new_applicationformitem" placeholder="Enter Program Name" />
+          {% csrf_token %}
+        </form>
+      </body>
+</html>
